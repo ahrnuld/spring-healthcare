@@ -15,6 +15,7 @@
         <dependency>
             <groupId>ahrnuld.spring</groupId>
             <artifactId>spring-healthcare-data</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
