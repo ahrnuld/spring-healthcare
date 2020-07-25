@@ -2,6 +2,7 @@ package ahrnuld.spring.springhealthcare.model;
 
 import java.time.LocalDate;
 
+/*Pet class*/
 public class Pet {
     private PetType petType;
     private Owner owner;
