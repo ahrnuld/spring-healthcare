@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringHealthcareApplicationTests {
 
-    @Test
+/*    @Test
     void contextLoads() {
-    }
+    }*/
 
 }
