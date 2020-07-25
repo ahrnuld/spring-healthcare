@@ -1,4 +1,4 @@
-package ahrnuld.spring.springhealthcare.model;
+package model;
 
 public class Person {
     private String firstName;
