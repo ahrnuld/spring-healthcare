@@ -44,6 +44,6 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:Ahrnuld@github.com/ahrnuld/spring-healthcare.git</developerConnection>
+        <developerConnection>scm:git:git://github.com/ahrnuld/spring-healthcare.git</developerConnection>
     </scm>
 </project>
