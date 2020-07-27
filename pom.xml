@@ -15,7 +15,7 @@
     </parent>
     <groupId>ahrnuld.spring</groupId>
     <artifactId>spring-healthcare</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>spring-healthcare</name>
     <description>Spring healthcare demo project</description>
 
