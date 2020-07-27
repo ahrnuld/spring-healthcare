@@ -3,7 +3,7 @@ package ahrnuld.springhealthcare.model;
 import java.time.LocalDate;
 
 /*Pet class*/
-public class Pet {
+public class Pet extends BaseEntity {
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
