@@ -1,4 +1,4 @@
-package model;
+package ahrnuld.springhealthcare.model;
 
 public class PetType {
     private String name;

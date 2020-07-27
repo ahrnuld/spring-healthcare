@@ -1,4 +1,4 @@
-package model;
+package ahrnuld.springhealthcare.model;
 
 import java.time.LocalDate;
 

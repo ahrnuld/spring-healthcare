@@ -1,6 +1,5 @@
-package ahrnuld.spring.springhealthcare;
+package ahrnuld.springhealthcare.springhealthcare;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
