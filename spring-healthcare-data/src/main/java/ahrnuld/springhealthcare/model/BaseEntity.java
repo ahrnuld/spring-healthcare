@@ -1,8 +1,5 @@
 package ahrnuld.springhealthcare.model;
 
-import sun.util.resources.Bundles;
-
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
