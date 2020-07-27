@@ -43,7 +43,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:ahrnuld@github.com/ahrnuld/spring-healthcare.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/ahrnuld/spring-healthcare.git</developerConnection>
     <tag>spring-healthcare-0.0.2</tag>
   </scm>
 </project>
