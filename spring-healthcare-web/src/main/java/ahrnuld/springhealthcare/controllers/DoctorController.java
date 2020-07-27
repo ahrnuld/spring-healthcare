@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DoctorController {
 
-    @RequestMapping({"/", "/index", "/index.html"})
+    @RequestMapping({"", "/", "/index", "/index.html"})
     public String listDoctors(){
         return "doctors/index";
     }
