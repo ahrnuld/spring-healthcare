@@ -14,7 +14,7 @@
     </parent>
     <groupId>ahrnuld.spring</groupId>
     <artifactId>spring-healthcare</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>spring-healthcare</name>
     <description>Spring healthcare demo project</description>
 
@@ -44,5 +44,6 @@
 
     <scm>
         <developerConnection>scm:git:ahrnuld@github.com/ahrnuld/spring-healthcare.git</developerConnection>
+    <tag>spring-healthcare-0.0.2</tag>
   </scm>
 </project>
