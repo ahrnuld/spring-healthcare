@@ -3,9 +3,11 @@ package ahrnuld.springhealthcare.services.map;
 import ahrnuld.springhealthcare.model.Owner;
 import ahrnuld.springhealthcare.services.CrudService;
 import ahrnuld.springhealthcare.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService  {
 
     @Override

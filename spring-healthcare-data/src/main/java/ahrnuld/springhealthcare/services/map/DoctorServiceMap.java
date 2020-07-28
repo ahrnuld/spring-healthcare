@@ -2,9 +2,11 @@ package ahrnuld.springhealthcare.services.map;
 
 import ahrnuld.springhealthcare.model.Doctor;
 import ahrnuld.springhealthcare.services.DoctorService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class DoctorServiceMap extends AbstractMapService<Doctor, Long> implements DoctorService {
 
     @Override

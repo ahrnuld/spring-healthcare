@@ -4,8 +4,6 @@ import ahrnuld.springhealthcare.model.Doctor;
 import ahrnuld.springhealthcare.model.Owner;
 import ahrnuld.springhealthcare.services.DoctorService;
 import ahrnuld.springhealthcare.services.OwnerService;
-import ahrnuld.springhealthcare.services.map.DoctorServiceMap;
-import ahrnuld.springhealthcare.services.map.OwnerServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final DoctorService doctorService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.doctorService = new DoctorServiceMap();
+    public DataLoader(OwnerService ownerService, DoctorService doctorService) {
+
+        this.ownerService = ownerService;
+        this.doctorService = doctorService;
     }
 
     @Override
