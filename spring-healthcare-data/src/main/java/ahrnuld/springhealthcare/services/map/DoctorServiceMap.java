@@ -1,11 +1,12 @@
 package ahrnuld.springhealthcare.services.map;
 
 import ahrnuld.springhealthcare.model.Doctor;
-import ahrnuld.springhealthcare.services.CrudService;
+import ahrnuld.springhealthcare.services.DoctorService;
 
 import java.util.Set;
 
-public class DoctorServiceMap extends AbstractMapService<Doctor, Long> implements CrudService<Doctor, Long> {
+public class DoctorServiceMap extends AbstractMapService<Doctor, Long> implements DoctorService {
+
     @Override
     public Set<Doctor> findAll() {
         return super.findAll();
