@@ -46,7 +46,7 @@ public class DataLoader implements CommandLineRunner {
         doctorService.save(doc1);
 
         Doctor doc2 = new Doctor();
-        doc2.setId(1L);
+        doc2.setId(2L);
         doc2.setFirstName("Doctor");
         doc2.setLastName("No");
 
