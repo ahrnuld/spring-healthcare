@@ -2,8 +2,10 @@ package ahrnuld.springhealthcare.bootstrap;
 
 import ahrnuld.springhealthcare.model.Doctor;
 import ahrnuld.springhealthcare.model.Owner;
+import ahrnuld.springhealthcare.model.PetType;
 import ahrnuld.springhealthcare.services.DoctorService;
 import ahrnuld.springhealthcare.services.OwnerService;
+import ahrnuld.springhealthcare.services.PetTypeService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -12,15 +14,27 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final DoctorService doctorService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService, DoctorService doctorService) {
+    public DataLoader(OwnerService ownerService, DoctorService doctorService, PetTypeService petTypeService) {
 
         this.ownerService = ownerService;
         this.doctorService = doctorService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+
+        dog = petTypeService.save(dog);
+        cat = petTypeService.save(cat);
+
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
@@ -49,5 +63,7 @@ public class DataLoader implements CommandLineRunner {
         doctorService.save(doc2);
 
         System.out.println("Loaded Doctors...");
+
+
     }
 }
