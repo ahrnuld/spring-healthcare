@@ -1,5 +1,6 @@
 package ahrnuld.springhealthcare.model;
 
+import javax.persistence.Entity;
 import java.util.HashSet;
 import java.util.Set;
 
