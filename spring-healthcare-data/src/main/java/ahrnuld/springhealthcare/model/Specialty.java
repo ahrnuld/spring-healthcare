@@ -1,6 +1,11 @@
 package ahrnuld.springhealthcare.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Specialty extends BaseEntity {
+
+    private String description;
 
     public String getDescription() {
         return description;
@@ -9,6 +14,4 @@ public class Specialty extends BaseEntity {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    private String description;
 }
