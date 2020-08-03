@@ -1,17 +1,16 @@
 package ahrnuld.springhealthcare.model;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 public class Specialty extends BaseEntity {
 
     private String description;
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
