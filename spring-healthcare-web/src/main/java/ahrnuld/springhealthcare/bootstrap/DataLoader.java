@@ -1,10 +1,7 @@
 package ahrnuld.springhealthcare.bootstrap;
 
 import ahrnuld.springhealthcare.model.*;
-import ahrnuld.springhealthcare.services.DoctorService;
-import ahrnuld.springhealthcare.services.OwnerService;
-import ahrnuld.springhealthcare.services.PetTypeService;
-import ahrnuld.springhealthcare.services.SpecialtyService;
+import ahrnuld.springhealthcare.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,13 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final DoctorService doctorService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, DoctorService doctorService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, DoctorService doctorService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
 
         this.ownerService = ownerService;
         this.doctorService = doctorService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -62,7 +61,7 @@ public class DataLoader implements CommandLineRunner {
 
         owner1.getPets().add(mikesPet);
 
-        ownerService.save(owner1);
+        owner1 = ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
@@ -79,7 +78,14 @@ public class DataLoader implements CommandLineRunner {
 
         owner2.getPets().add(fionasPet);
 
-        ownerService.save(owner2);
+        owner2 = ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners...");
 
@@ -109,5 +115,6 @@ public class DataLoader implements CommandLineRunner {
         doctorService.save(doc2);
 
         System.out.println("Loaded Doctors...");
+
     }
 }
