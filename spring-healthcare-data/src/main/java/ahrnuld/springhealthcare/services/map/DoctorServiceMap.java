@@ -3,11 +3,13 @@ package ahrnuld.springhealthcare.services.map;
 import ahrnuld.springhealthcare.model.Doctor;
 import ahrnuld.springhealthcare.services.DoctorService;
 import ahrnuld.springhealthcare.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class DoctorServiceMap extends AbstractMapService<Doctor, Long> implements DoctorService {
 
     private final SpecialtyService specialtyService;
